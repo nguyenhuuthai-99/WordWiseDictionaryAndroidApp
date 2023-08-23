@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="sort_by">
+        <item>Date Added (newest)</item>
+        <item>Date Added (oldest)</item>
+        <item>Name A-Z</item>
+        <item>Name Z-A</item>
+    </string-array>
+</resources>

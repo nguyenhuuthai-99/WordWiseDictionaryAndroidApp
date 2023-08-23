@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_dictionary_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="10dp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/youglish_holder"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/exit_bottom_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="7dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/word_bottom_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:fontFamily="monospace"
+        android:inputType="textCapSentences"
+        android:textColor="@color/blue"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exit_bottom_view_button"
+        tools:text="name"
+        android:text="name"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/word_bottom_view_form_holder"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginVertical="4dp"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/word_bottom_view" />
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/youglish_bottom_view_holder"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="480dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_marginBottom="-40dp"-->
+<!--        android:layout_marginLeft="-10dp"-->
+<!--        android:layout_marginRight="-10dp"-->
+<!--        app:cardCornerRadius="30dp"-->
+<!--        app:cardElevation="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Pronunciation for: "-->
+<!--                android:textSize="17dp"-->
+<!--                android:textStyle="italic"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/youglish_bottom_view_title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textSize="17dp"-->
+<!--                android:textStyle="italic|bold"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/textView"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/textView"-->
+<!--                tools:text="name" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/exit_youglish_bottom_view"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginEnd="18dp"-->
+<!--                android:src="@drawable/ic_baseline_close_24"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <WebView-->
+<!--                android:id="@+id/youglish_browser_bottom_view"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="350dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/exit_youglish_bottom_view" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="#00BCD4">
+
+    <TextView
+        android:id="@+id/extend_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="title" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#009688"
+        app:layout_constraintTop_toBottomOf="@+id/extend_title"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line">
+
+        <ImageView
+            android:id="@+id/extend_save_word"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="-6dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/extend_definition" />
+
+        <TextView
+            android:id="@+id/extend_definition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/extend_save_word"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="definition" />
+
+        <LinearLayout
+            android:id="@+id/extend_example_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/extend_definition"
+            app:layout_constraintTop_toBottomOf="@+id/extend_definition">
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

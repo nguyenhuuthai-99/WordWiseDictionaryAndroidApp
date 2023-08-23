@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
+        <TextView
+            android:id="@+id/word_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="noun" />
+
+        <LinearLayout
+            android:id="@+id/sound_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            app:layout_constraintStart_toStartOf="@+id/word_form"
+            app:layout_constraintTop_toBottomOf="@+id/word_form">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="US"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/us_sound"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="3dp"
+                android:src="@drawable/ic_speaker"
+                app:tint="@color/blue" />
+
+            <TextView
+                android:id="@+id/ipa_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/neɪm/"
+                android:textColor="@color/blue"
+                tools:text="/neɪm/" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UK"
+                android:textColor="@color/blue"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/uk_sound"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="3dp"
+                android:src="@drawable/ic_speaker"
+                app:tint="@color/blue" />
+
+            <TextView
+                android:id="@+id/ipa_uk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/neɪm/"
+                android:textColor="@color/blue"
+                tools:text="/neɪm/" />
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/youglish_sound_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/sound_holder"
+            app:layout_constraintTop_toTopOf="@+id/sound_holder">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/conversation" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:text="People say it"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/definition_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sound_holder" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/definition_extend_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/definition_holder" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

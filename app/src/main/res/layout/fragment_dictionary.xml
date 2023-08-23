@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dictionary_frag_constrain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
+        android:animateLayoutChanges="true"
+        android:background="#FDFDFD"
+        android:clipToPadding="false"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dictionary_frag_constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/dictionary_frag_back_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/dictionary_frag_word_input"
+                android:layout_width="0dp"
+                android:layout_height="29dp"
+                android:background="@color/white"
+                android:hint="Search your word"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:textSize="18dp"
+                android:transitionName="move"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dictionary_frag_back_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/dictionary_frag_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/blue"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:focusable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dictionary_frag_constraintLayout"
+            tools:text="name" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dictionary_frag_word_form_holder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="4dp"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dictionary_frag_word" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

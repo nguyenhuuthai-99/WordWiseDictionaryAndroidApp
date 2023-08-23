@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@color/white"
+    android:paddingHorizontal="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/saved_holder_definition_holder"
+        app:layout_constraintEnd_toStartOf="@+id/delete_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_go"
+            app:tint="@color/blue" />
+        <TextView
+            android:id="@+id/saved_holder_word_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/blue"
+            android:textSize="27dp"
+
+            tools:text="name:" />
+
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/saved_holder_definition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:fontFamily="monospace"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saved_holder_definition_holder"
+        tools:text="(noun) to put two or more numbers or amounts together to get a total:" />
+
+
+    <LinearLayout
+        android:id="@+id/dropdown_button"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saved_holder_definition">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Show Examples"
+            android:textColor="@color/blue"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/saved_holder_example"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropdown_button"
+        android:orientation="vertical" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

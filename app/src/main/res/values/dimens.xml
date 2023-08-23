@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="youglish_holder_height">480dp</dimen>
+    <dimen name="youlish_holder_collapse">-2dp</dimen>
+</resources>
